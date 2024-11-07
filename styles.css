@@ -1,0 +1,260 @@
+General Layout and Colors
+:root {
+    --primary-dark: #1e1e1e;
+    --accent-green: #76b900;
+    --text-white: #f1f1f1;
+    --light-dark: #333;
+    --card-bg: #292929;
+}
+
+/* Reset some default margins/paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('https://i.imgur.com/5qHeqzb.jpg'); /* Replace with preferred gaming background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 15px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .cta-buttons .btn {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    padding: 10px 30px;
+}
+
+.hero .btn-success {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+}
+
+.hero .btn-outline-light {
+    border-color: white;
+    color: white;
+}
+
+.hero .cta-buttons .btn:hover {
+    background-color: #fff;
+    color: var(--primary-dark);
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--primary-dark);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--accent-green);
+}
+
+/* Upcoming Games Section */
+.upcoming {
+    padding: 50px 0;
+    background-color: var(--primary-dark);
+}
+
+.upcoming h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-green);
+    margin-bottom: 30px;
+}
+
+.game-item {
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.game-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+}
+
+.game-item:hover img {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Top Features Section */
+.features {
+    padding: 50px 0;
+    background-color: #333;
+}
+
+.features .feature-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.features h3 {
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin-top: 10px;
+}
+
+.features p {
+    color: #bbb;
+}
+
+.features .feature-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.features .feature-item img:hover {
+    transform: scale(1.1);
+}
+
+.features .feature-item:hover h3 {
+    color: #fff;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 0;
+    background-color: var(--primary-dark);
+}
+
+.gallery h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-green);
+    margin-bottom: 30px;
+}
+
+.gallery-item {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 255, 128, 0.5);
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+    opacity: 0.9;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 30px 0;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+footer .list-inline-item {
+    margin: 0 10px;
+}
+
+footer .list-inline-item a {
+    color: white;
+    font-size: 1.1rem;
+}
+
+footer .list-inline-item a:hover {
+    color: var(--accent-green);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-buttons .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .features .feature-item {
+        padding: 15px;
+    }
+
+    .game-item {
+        margin-bottom: 20px;
+    }
+
+    .gallery-item img {
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 991px) {
+    .game-item {
+        margin-bottom: 30px;
+    }
+}
